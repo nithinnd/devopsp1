@@ -1,0 +1,27 @@
+﻿# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# AWS credentials
+.aws/
+*.pem
+*.key
+
+# Environment variables
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Helm
+*.tgz
+desktop.ini

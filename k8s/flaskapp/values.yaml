@@ -1,0 +1,28 @@
+appName: flaskapp
+replicaCount: 2
+
+image:
+  repository: nithin700/decisionapp
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 5000
+  nodeport: 30080
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "250m"
+  limits:
+    memory: "256Mi"
+    cpu: "500m"
+
+autoscaling:
+  enabled: false
+
+serviceAccount:
+  create: false
+  name: ""
