@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Decision App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="card">
+            <p class="eyebrow">Random Decision App</p>
+            <h1>Ask your question. Let chaos answer.</h1>
+            <p class="subtitle">A tiny decision helper with just enough sarcasm to keep things honest.</p>
+
+            <div class="question-form">
+                <label for="question" class="sr-only">Your question</label>
+                <input
+                    id="question"
+                    type="text"
+                    placeholder="Should I start that project today?"
+                    autocomplete="off"
+                >
+                <button id="decide-btn" type="button">Decide</button>
+            </div>
+
+            <div class="actions">
+                <button id="roast-btn" type="button" class="secondary-btn">Roast Me</button>
+                <button id="motivate-btn" type="button" class="secondary-btn">Motivate Me</button>
+            </div>
+
+            <section class="result-panel" aria-live="polite">
+                <p id="result-label" class="result-label">Waiting for your life-changing question.</p>
+                <h2 id="answer">No answer yet</h2>
+                <p id="confidence" class="confidence"></p>
+                <p id="message" class="message"></p>
+            </section>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
